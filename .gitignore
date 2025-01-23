@@ -7,6 +7,4 @@ vendor/
 main.css
 # Ignorer les fichiers source maps
 *.map
-# Ignorer le dossier css dans Public
-Public/css/style.css
 
