@@ -3,8 +3,7 @@
 # Répertoires de dépendances
 node_modules/
 vendor/
-# Ignorer les fichiers CSS compilés
-main.css
 # Ignorer les fichiers source maps
 *.map
+
 
