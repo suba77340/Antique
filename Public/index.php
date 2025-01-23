@@ -13,8 +13,13 @@ require_once __DIR__ . '/../Autoloader.php';
 Autoloader::register();
 
 // Load environment variables from the .env file in the root directory
-$dotenv = Dotenv::createImmutable(ROOT);
-$dotenv->load();
+// Assurez-vous que les variables d'environnement sont définies dans Heroku
+$_ENV['DB_HOST'] = getenv('DB_HOST');
+$_ENV['DB_NAME'] = getenv('DB_NAME');
+$_ENV['DB_USER'] = getenv('DB_USER');
+$_ENV['DB_PASS'] = getenv('DB_PASS');
+$_ENV['DB_PORT'] = getenv('DB_PORT');
+
 
 // Start the application
 $app = new Main();
